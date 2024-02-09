@@ -1,6 +1,6 @@
 # OOP-Team-Profile-Generator
 
-This application takes in information about employees on a software engineering team, then generates an HTML webpage that displays summaries for each person.
+Node.js command-line application that takes in information about employees on a software engineering team, then generates an HTML webpage that displays summaries for each person.
 
 # Module 12 Object-Oriented Programming: Team Profile Generator
 
