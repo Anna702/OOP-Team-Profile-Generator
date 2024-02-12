@@ -96,7 +96,7 @@ import("inquirer").then((inquirer) => {
         );
         team.push(engineer);
         // prompt the menu again (to let user make a choice again)
-        promptMenu();
+        menuPrompt();
       });
   }
 
@@ -119,7 +119,7 @@ import("inquirer").then((inquirer) => {
         );
         team.push(intern);
         //prompt the menu again
-        promptMenu();
+        menuPrompt();
       });
   }
 
