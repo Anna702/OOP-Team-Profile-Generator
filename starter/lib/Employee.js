@@ -6,7 +6,7 @@ class Employee {
       throw new Error("Enter a non-empty string as a name");
     }
     // Check if 'id' is a positive number
-    if (!Number.isInteger(id) || id <= 0) {
+    if (!Number.isInteger(id) && id < 0) {
       throw new Error("Enter a positive integer as id");
     }
     // Check if email has a correct format
