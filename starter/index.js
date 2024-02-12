@@ -47,5 +47,28 @@ function teamManagerPrompt() {
 }
 
 function menuPrompt() {
-    
+  inquirer
+    .prompt([
+      {
+        type: "list",
+        name: "choice",
+        message: "Who would you like to add next?",
+        choices: ["An engineer", "An intern", "Finish building the team"],
+      },
+    ])
+    .then((answer) => {
+      switch (answer.choice) {
+        case "An engineer":
+          addEngineer();
+          break;
+        case "An intern":
+          addIntern();
+          break;
+        case "Finish building the team":
+          createHTML();
+          break;
+        default:
+          console.log("Invalid  choice");
+      }
+    });
 }
