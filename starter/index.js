@@ -73,16 +73,14 @@ function menuPrompt() {
     });
 }
 
+//function to add info about  an Engineer
 function addEngineer() {
   console.log("Provide an information about the engineer");
   inquirer
     .prompt([
       { type: "input", name: "name", message: "Enter Engineer's Name:" },
-
       { type: "input", name: "id", message: "Employee ID:" },
-
       { type: "input", name: "email", message: "Email:" },
-
       { type: "input", name: "github", message: "GitHub username:" },
     ])
     .then((answers) => {
@@ -94,6 +92,29 @@ function addEngineer() {
       );
       team.push(engineer);
       // prompt the menu again (to let user make a choice again)
+      promptMenu();
+    });
+}
+
+//function to add info about intern
+function addIntern() {
+  console.log("Provide information about intern");
+  inquirer
+    .prompt([
+      { type: "input", name: "name", message: "Enter Intern's Name:" },
+      { type: "input", name: "id", message: "Employee ID:" },
+      { type: "input", name: "email", message: "Email:" },
+      { type: "input", name: "school", message: "School:" },
+    ])
+    .then((answers) => {
+      let intern = new Intern(
+        answers.name,
+        answers.id,
+        answers.email,
+        answers.school
+      );
+      team.push(intern);
+      //prompt the menu again
       promptMenu();
     });
 }
