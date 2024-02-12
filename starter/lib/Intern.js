@@ -1,4 +1,5 @@
 // this code is to define and export the Intern class (that inherit from Employee) with additional property of school and getSchool() method.
+const Employee = require("./Employee.js");
 
 class Intern extends Employee {
   constructor(name, id, email, school) {
