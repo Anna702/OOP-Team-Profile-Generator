@@ -12,6 +12,11 @@ import("inquirer").then((inquirer) => {
 
   const render = require("./src/page-template.js");
 
+  // Ensure the output directory exists
+  if (!fs.existsSync(OUTPUT_DIR)) {
+    fs.mkdirSync(OUTPUT_DIR);
+  }
+
   // create a variable to ensure inquirer is ok
   const prompt = inquirer.default || inquirer;
   const team = [];
