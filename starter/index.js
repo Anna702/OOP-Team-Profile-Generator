@@ -43,6 +43,8 @@ function teamManagerPrompt() {
         answers.officeNumber
       );
       team.push(manager);
+      // Call menuPrompt - to let user make a choice
+      menuPrompt();
     });
 }
 
@@ -118,3 +120,18 @@ function addIntern() {
       promptMenu();
     });
 }
+
+//function to generate an HTML file and save it to the specified output path.
+function createHTML() {
+  const html = render(team);
+  fs.writeFile(outputPath, html, (err) => {
+    if (err) {
+      console.log(err);
+    } else {
+      console.log("HTML file with Team info generated successfully!");
+    }
+  });
+}
+
+// Start the app
+teamManagerPrompt();
