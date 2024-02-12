@@ -15,7 +15,7 @@ const render = require("./src/page-template.js");
 const team = [];
 
 function teamManagerPrompt() {
-  console.log("Provide the team manager’s information");
+  console.log("Provide an information about the team manager");
   inquirer
     .prompt([
       { type: "input", name: "name", message: "Enter Manager's Name:" },
@@ -70,5 +70,30 @@ function menuPrompt() {
         default:
           console.log("Invalid  choice");
       }
+    });
+}
+
+function addEngineer() {
+  console.log("Provide an information about the engineer");
+  inquirer
+    .prompt([
+      { type: "input", name: "name", message: "Enter Engineer's Name:" },
+
+      { type: "input", name: "id", message: "Employee ID:" },
+
+      { type: "input", name: "email", message: "Email:" },
+
+      { type: "input", name: "github", message: "GitHub username:" },
+    ])
+    .then((answers) => {
+      let engineer = new Engineer(
+        answers.name,
+        answers.id,
+        answers.email,
+        answers.github
+      );
+      team.push(engineer);
+      // prompt the menu again (to let user make a choice again)
+      promptMenu();
     });
 }
