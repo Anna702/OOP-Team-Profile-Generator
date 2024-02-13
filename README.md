@@ -1,146 +1,69 @@
-# OOP-Team-Profile-Generator
+# OOP-Team-Profile-Generator [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Node.js command-line application that takes in information about employees on a software engineering team, then generates an HTML webpage that displays summaries for each person.
+Node.js command-line application that takes in information about employees and generates an HTML webpage that displays summaries for each person.
 
-# Module 12 Object-Oriented Programming: Team Profile Generator
+## Contents
 
-## Your Task
+- [Description](#description)
+- [User Story](#user-story)
+- [Features](#features)
+- [Instructions](#instructions)
+- [Mock-Up](#mock-up)
+- [Credits](#credits)
+- [Questions](#questions)
+- [Contacts](#contacts)
 
-Your task is to take the given starter code and convert it into a working Node.js command-line application. This application will take in information about employees on a software engineering team, then generates an HTML webpage that displays summaries for each person. You have been provided with tests, so make sure every part of your code passes each provided test.
+## Description
+
+The Employee Summary Generator is a [Node.js](https://nodejs.org/en) command-line application designed to streamline the process of creating HTML webpages that display summaries for each member of a software engineering team. With this application, users can input information about various team members, including managers, engineers, and interns. The application then generates an HTML webpage containing detailed summaries for each employee.
 
 ## User Story
 
-As a manager a user want to generate a webpage that displays my team's basic info so that a user have quick access to their emails and GitHub profiles.
+`AS A manager a user want to generate a webpage, 
+THAT displays his team's basic info, 
+SO THAT a user have quick access to their emails and GitHub profiles.`
+
+## Features
+
+- **Command-line Interface:** Users interact with the application through a command-line interface, providing input data about team members.
+
+- **Employee Information Input:** Users can input information about managers, engineers, and interns, including names, IDs, email addresses, GitHub profiles, office numbers and schools.
+
+- **HTML Output Generation:** Based on the input data provided by the user, the application generates an HTML webpage that displays detailed summaries for each team member.
+
+- **Test Coverage:** The application comes with a suite of tests to ensure that every part of the code functions as expected, providing robust and reliable performance.
+
+- **Jest Integration:** The application uses [Jest](https://www.npmjs.com/package/jest) for running unit tests, ensuring thorough testing of all code components.
+
+- **Inquirer Integration:** Input from the user is collected using the [Inquirer package](https://www.npmjs.com/package/inquirer), providing a user-friendly and interactive experience.
 
 ## Instructions
 
-- Create a command-line application that accepts accepts user input using the provided starter code.
-  - Create classes for each team member provided and export them. The tests for these classes (in the `_tests_` directory) must ALL pass.
-    - The first class is an `Employee` parent class with the following properties and methods:
-      - `name`
-      - `id`
-      - `email`
-      - `getName()`
-      - `getId()`
-      - `getEmail()`
-      - `getRole()`&mdash;returns `'Employee'`
-    - The other three classes will extend `Employee`.
-    - In addition to `Employee`'s properties and methods, `Manager` will also have the following:
-      - `officeNumber`
-      - `getRole()`&mdash;overridden to return `'Manager'`
-    - In addition to `Employee`'s properties and methods, `Engineer` will also have the following:
-      - `github`&mdash;GitHub username
-      - `getGithub()`
-      - `getRole()`&mdash;overridden to return `'Engineer'`
-    - In addition to `Employee`'s properties and methods, `Intern` will also have the following:
-      - `school`
-      - `getSchool()`
-      - `getRole()`&mdash;overridden to return `'Intern'`
-    - Finally, although it’s not a requirement, consider adding validation to ensure that user input is in the proper format.
-  - Write code in `index.js` that uses inquirer to gather information about the development team members and creates objects for each team member using the correct classes as blueprints.
-    - When a user starts the application then they are prompted to enter the **team manager**’s:
-      - Name
-      - Employee ID
-      - Email address
-      - Office number
-    - When a user enters those requirements then the user is presented with a menu with the option to:
-      - Add an engineer
-      - Add an intern
-      - Finish building the team
-    - When a user selects the **engineer** option then a user is prompted to enter the following and then the user is taken back to the menu:
-      - Engineer's Name
-      - ID
-      - Email
-      - GitHub username
-    - When a user selects the intern option then a user is prompted to enter the following and then the user is taken back to the menu:
-      - Intern’s name
-      - ID
-      - Email
-      - School
-    - When a user decides to finish building their team then they exit the application, and the HTML is generated.
-  - Call the `render` function (provided for you) and pass in an array containing all employee objects;
-    - The `render` function will generate and return a block of HTML including templated divs for each employee!
-  - Create an HTML file using the HTML returned from the `render` function.
-    - Write it to a file named `team.html` in the `output` folder.
-    - You can use the provided variable `outputPath` to target this location.
+1. `Install Node.js:` Make sure you have [Node.js](https://nodejs.org/en) installed on your system.
+2. `Install Dependencies:` Run npm install to install the necessary dependencies for the application.
+3. `Run the Application:` Use the command node index.js to start the application.
+4. `Follow the Prompts:` Input information about each team member as prompted by the application.
+5. `View Output:` Once all information has been provided, the application will generate an HTML file containing the summaries for each team member. Open this HTML file in a web browser to view the output.
 
----
+`Note:` Ensure that all tests pass before using the application in a production environment to guarantee accurate results.
 
 ## Mock-Up
 
-The following image shows a mock-up of the generated HTML’s appearance and functionality:
+The following image shows a mock-up of the generated HTML’s appearance:
 
-![HTML webpage titled “My Team” features five boxes listing employee names, titles, and other key info.](./Assets/14-object-oriented-programming-challenge-demo.png)
+![HTML webpage titled “team” features five boxes listing employee names, titles, and other key info.](./assets/team%20page%20screenshot.png)
 
-The styling in the image is just an example, so feel free to add your own.
+## Credits
 
----
+License [Badge](https://shields.io/).
 
-## Getting Started
+Online tutoring sessions [EdX Skills Bootcamp in Front-End Web Development](https://www.edx.org/boot-camps/coding/skills-bootcamp-in-front-end-web-development).
 
-This Challenge will combine many of the skills we've covered so far. In addition to the User Story and Acceptance Criteria, we’ve provided some guidelines to help get started.
+## Questions
 
-Your application should use [Jest](https://www.npmjs.com/package/jest) for running the unit tests and [Inquirer](https://www.npmjs.com/package/inquirer) for collecting input from the user. The application will be invoked by using the following command:
+In case you have any questions, feel free to contact me at <a href="mailto:annanvks@gmail.com?">annanvks@gmail.com</a>.
 
-```bash
-node index.js
-```
+## Contacts
 
----
-
-## Hints
-
-- You will want to make your methods as pure as possible. This means try to make your methods simple so that they are easier to test.
-
-- The different employee types should all inherit some methods and properties from a base class of `Employee`.
-
-- Be sure to test out each class and verify it generates an object with the correct structure and methods. This structure will be crucial in order for the provided `render` function to work!
-- You may need to check if the `output` folder exists and create it if it does not.
-
----
-
-## Grading Requirements
-
-This Challenge is graded based on the following criteria:
-
-### Deliverables: 25%
-
-- A sample HTML file generated using the application must be submitted.
-
-- Your GitHub repository containing your application code.
-
-### Technical Acceptance Criteria: 50%
-
-- Satisfies all of the preceding acceptance criteria plus the following:
-
-  - Uses the [Inquirer package](https://www.npmjs.com/package/inquirer).
-
-  - All tests pass using the [Jest package](https://www.npmjs.com/package/jest).
-
-  - The application must have `Employee`, `Manager`, `Engineer`, and `Intern` classes.
-
-### Repository Quality: 25%
-
-- Repository has a unique name.
-
-- Repository follows best practices for file structure and naming conventions.
-
-- Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-- Repository contains multiple descriptive commit messages.
-
-- Repository contains a high-quality readme with description.
-
----
-
-## Review
-
-You are required to submit the following for review:
-
-- A sample HTML file generated using your application.
-
-- The URL of the GitHub repository, with a unique name and a readme describing the project.
-
----
-
-© 2023 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
+- GitHub: [Anna702](https://github.com/Anna702})
+- LinkedIn: [AnnaChe](https://www.linkedin.com/in/annache)
